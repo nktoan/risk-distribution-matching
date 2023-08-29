@@ -1,11 +1,11 @@
-/home/s222165627/.conda/envs/domainbed/bin/python
-/home/s222165627/source_code_conf/risk-distribution-matching/CMNIST
-/home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/domainbed/data/
+./.conda/envs/domainbed/bin/python
+./source_code_conf/risk-distribution-matching/CMNIST
+./causal_optimisation_dg/quantile_rm/DomainBed/domainbed/data/
 Args:
 	algorithm: rdm
 	alpha: -10000
 	batch_size: 25000
-	data_dir: /home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/domainbed/data/
+	data_dir: ./causal_optimisation_dg/quantile_rm/DomainBed/domainbed/data/
 	deterministic: False
 	dropout_p: 0.2
 	erm_pretrain_iters: 0
@@ -20,7 +20,7 @@ Args:
 	mlp_hidden_dim: 390
 	n_workers: 0
 	network: MLP
-	output_dir: /home/s222165627/source_code_conf/risk-distribution-matching/CMNIST
+	output_dir: ./source_code_conf/risk-distribution-matching/CMNIST
 	penalty_weight: 10000.0
 	save_ckpts: True
 	seed: 0
