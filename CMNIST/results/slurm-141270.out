@@ -1,0 +1,66 @@
+/home/s222165627/.conda/envs/domainbed/bin/python
+/home/s222165627/source_code_conf/risk-distribution-matching/CMNIST
+/home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/domainbed/data/
+Args:
+	algorithm: rdm
+	alpha: -10000
+	batch_size: 25000
+	data_dir: /home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/domainbed/data/
+	deterministic: False
+	dropout_p: 0.2
+	erm_pretrain_iters: 400
+	eval_freq: 50
+	exp_name: reproduce
+	full_resolution: False
+	groupdro_eta: 1.0
+	loss_fn: nll
+	lr: 0.0001
+	lr_cos_sched: True
+	lr_factor_reduction: 1
+	mlp_hidden_dim: 390
+	n_workers: 0
+	network: MLP
+	output_dir: /home/s222165627/source_code_conf/risk-distribution-matching/CMNIST
+	penalty_weight: 10000.0
+	save_ckpts: True
+	seed: 0
+	steps: 600
+	test_env_ms: 0.9
+	test_envs: 0.1,0.2,0.5,0.9
+	train_env_ps: (0.1, 0.2)
+	train_envs: default
+	variance_weight: 0.005
+	weight_decay: 0
+0.1_acc       0.1_loss      0.2_acc       0.2_loss      0.5_acc       0.5_loss      0.9_acc       0.9_loss      avg_step_tim  epoch         loss          mem_gb        step         
+0.9040000000  0.3241067827  0.7952000000  0.5319377780  0.4978000000  1.0944577456  0.1017000000  1.8486604691  0.4838656807  50.000000000  0.4363019466  0.7209973335  50           
+0.1_acc       0.1_loss      0.2_acc       0.2_loss      0.5_acc       0.5_loss      0.9_acc       0.9_loss      avg_step_tim  epoch         loss          mem_gb        step         
+0.9034000000  0.3105668128  0.7953000000  0.4896648228  0.4977000000  0.9685109854  0.1028000000  1.6152442694  0.2370932126  100.00000000  0.4105432630  0.7209973335  100          
+0.1_acc       0.1_loss      0.2_acc       0.2_loss      0.5_acc       0.5_loss      0.9_acc       0.9_loss      avg_step_tim  epoch         loss          mem_gb        step         
+0.9042000000  0.3004310429  0.7949000000  0.4744654596  0.4985000000  0.9347728491  0.1036000000  1.5600467920  0.1583596388  150.00000000  0.3997321129  0.7209973335  150          
+0.1_acc       0.1_loss      0.2_acc       0.2_loss      0.5_acc       0.5_loss      0.9_acc       0.9_loss      avg_step_tim  epoch         loss          mem_gb        step         
+0.9042000000  0.2934887707  0.7953000000  0.4667946100  0.4992000000  0.9235522151  0.1050000000  1.5453463793  0.1188879943  200.00000000  0.3827092946  0.7209973335  200          
+0.1_acc       0.1_loss      0.2_acc       0.2_loss      0.5_acc       0.5_loss      0.9_acc       0.9_loss      avg_step_tim  epoch         loss          mem_gb        step         
+0.9028000000  0.2896952033  0.7941000000  0.4607104957  0.5004000000  0.9097800255  0.1096000000  1.5204402208  0.0950175161  250.00000000  0.3803153932  0.7209973335  250          
+0.1_acc       0.1_loss      0.2_acc       0.2_loss      0.5_acc       0.5_loss      0.9_acc       0.9_loss      avg_step_tim  epoch         loss          mem_gb        step         
+0.9010000000  0.2878037691  0.7938000000  0.4576509297  0.5029000000  0.9039517641  0.1154000000  1.5082635880  0.0798480399  300.00000000  0.3698323369  0.7209973335  300          
+0.1_acc       0.1_loss      0.2_acc       0.2_loss      0.5_acc       0.5_loss      0.9_acc       0.9_loss      avg_step_tim  epoch         loss          mem_gb        step         
+0.8990000000  0.2861217260  0.7936000000  0.4583293796  0.5063000000  0.9092353582  0.1243000000  1.5191737413  0.0679063245  350.00000000  0.3609808385  0.7209973335  350          
+0.1_acc       0.1_loss      0.2_acc       0.2_loss      0.5_acc       0.5_loss      0.9_acc       0.9_loss      avg_step_tim  epoch         loss          mem_gb        step         
+0.8973000000  0.2855346501  0.7926000000  0.4601066411  0.5105000000  0.9158645272  0.1316000000  1.5324281454  0.0597257191  400.00000000  0.3540177345  0.7209973335  400          
+Saved ERM-pretrained model.
+0.1_acc       0.1_loss      0.2_acc       0.2_loss      0.5_acc       0.5_loss      0.9_acc       0.9_loss      avg_step_tim  epoch         erm_loss      loss          matching_pen  mem_gb        step          variance_pen 
+0.6809000000  0.6063924432  0.6824000000  0.6122626662  0.6962000000  0.6122738123  0.7195000000  0.6204877496  0.0536570782  450.00000000  0.5953406096  0.0000646884  0.0000050450  0.7212800980  450           0.2188104838 
+0.1_acc       0.1_loss      0.2_acc       0.2_loss      0.5_acc       0.5_loss      0.9_acc       0.9_loss      avg_step_tim  epoch         erm_loss      loss          matching_pen  mem_gb        step          variance_pen 
+0.7025000000  0.5811730027  0.7017000000  0.5936471820  0.7010000000  0.6122279167  0.7011000000  0.6450055838  0.0482609730  500.00000000  0.5681595206  0.0000589874  0.0000020726  0.7212800980  500           0.1978716850 
+0.1_acc       0.1_loss      0.2_acc       0.2_loss      0.5_acc       0.5_loss      0.9_acc       0.9_loss      avg_step_tim  epoch         erm_loss      loss          matching_pen  mem_gb        step          variance_pen 
+0.6998000000  0.5847789645  0.6987000000  0.5963113904  0.7004000000  0.6121557355  0.7036000000  0.6413639784  0.0435090542  550.00000000  0.5760790110  0.0000679700  0.0000102587  0.7212800980  550           0.2068588138 
+0.1_acc       0.1_loss      0.2_acc       0.2_loss      0.5_acc       0.5_loss      0.9_acc       0.9_loss      avg_step_tim  epoch         erm_loss      loss          matching_pen  mem_gb        step          variance_pen 
+0.7003000000  0.5843356252  0.6988000000  0.5959916115  0.7004000000  0.6121572256  0.7034000000  0.6418011189  0.0392067762  600.00000000  0.5725649595  0.0000591501  0.0000017922  0.7212800980  600           0.2028603852 
+
+final accuracies:
+0.0    0.1    0.2    0.3    0.4    0.5    0.6    0.7    0.8    0.9    1.0   
+0.690  0.683  0.689  0.691  0.705  0.692  0.701  0.715  0.715  0.711  0.720 
+
+best accuracies:
+0.0    0.1    0.2    0.3    0.4    0.5    0.6    0.7    0.8    0.9    1.0   
+0.663  0.663  0.671  0.677  0.699  0.688  0.702  0.719  0.725  0.724  0.738 
