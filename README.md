@@ -1,6 +1,6 @@
 # Domain Generalisation via Risk Distribution Matching
 
-This is the source code for replicating the results from our paper submitted to WACV24 (Research Track): *Domain Generalisation via Risk Distribution Matching*.
+This is the source code for replicating the results from our paper accepted to WACV24 (Research Track): *Domain Generalisation via Risk Distribution Matching*.
 
 Thank you for your interest!
 
