@@ -1,0 +1,85 @@
+Environment:
+	Python: 3.11.2
+	PyTorch: 2.0.0+cu117
+	Torchvision: 0.15.1+cu117
+	CUDA: 11.7
+	CUDNN: 8500
+	NumPy: 1.24.2
+	PIL: 9.5.0
+Args:
+	algorithm: DGPM2
+	checkpoint_freq: None
+	data_dir: /home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/domainbed/data/
+	dataset: OfficeHome
+	holdout_fraction: 0.2
+	hparams: None
+	hparams_seed: 0
+	output_dir: /home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/domainbed/run_sweep/reported_test3Aug_DGPM2_OfficeHome_lowerweight_matching/a74ad13863032376db0fb956106748ae
+	save_model_every_checkpoint: False
+	seed: 60325942
+	skip_model_save: False
+	steps: None
+	task: domain_generalization
+	test_envs: [3]
+	trial_seed: 1
+	uda_holdout_fraction: 0
+HParams:
+	batch_size: 80
+	class_balanced: False
+	data_augmentation: True
+	dgpm_lambda: 0.5
+	dgpm_lr: 1.5e-05
+	dgpm_penalty_anneal_iters: 1500
+	lr: 5e-05
+	nonlinear_classifier: False
+	resnet18: False
+	resnet_dropout: 0.0
+	variance_weight: 0.0
+	weight_decay: 0.0
+/home/s222165627/.conda/envs/domainbed/lib/python3.11/site-packages/torch/utils/data/dataloader.py:561: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/s222165627/.conda/envs/domainbed/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/s222165627/.conda/envs/domainbed/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+wandb: Currently logged in as: ktoan271199 (nktoan271199). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.15.8 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.5
+wandb: Run data is saved locally in /home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/wandb/run-20230803_165539-9jmdjflu
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run noble-flower-1556
+wandb:  View project at https://wandb.ai/nktoan271199/risk_distribution_matching_PACS
+wandb:  View run at https://wandb.ai/nktoan271199/risk_distribution_matching_PACS/runs/9jmdjflu
+dgpm_lambda   env0_in_acc   env0_out_acc  env1_in_acc   env1_out_acc  env2_in_acc   env2_out_acc  env3_in_acc   env3_out_acc  epoch         erm_loss      matching_pen  mem_gb        step          step_time     total_loss    variance_pen 
+0.5000000000  0.0149330587  0.0144329897  0.0220504009  0.0240549828  0.0278716216  0.0202931229  0.0157773953  0.0264064294  0.0000000000  4.2486848831  0.0176649094  19.642269134  0             2.4530293941  4.2486848831  0.2113957107 
+0.5000000000  0.9624098867  0.7360824742  0.9155211913  0.7182130584  0.9597409910  0.8669673055  0.7515777395  0.7451205511  12.358393408  0.7133858409  0.0474637318  19.820126533  300           0.9038595072  0.7133858409  2.8062837702 
+0.5000000000  0.9886714727  0.7587628866  0.9636311569  0.7571592211  0.9805743243  0.8703494927  0.7446930579  0.7439724455  24.716786817  0.1317619514  0.0275776005  19.820126533  600           0.9043089843  0.1317619514  0.8417543818 
+0.5000000000  0.9891864058  0.7237113402  0.9687857961  0.7605956472  0.9859234234  0.8680947012  0.7366609294  0.7301951780  37.075180226  0.0766564966  0.0169590219  19.820126533  900           0.9032145754  0.0766564966  0.5360315635 
+0.5000000000  0.9871266735  0.7257731959  0.9727949599  0.7571592211  0.9884572072  0.8816234498  0.7478485370  0.7416762342  49.433573635  0.0589983175  0.0110449028  19.820126533  1200          0.9126450292  0.0589983175  0.4178771448 
+0.5000000000  0.9927909372  0.7257731959  0.9765177549  0.7800687285  0.9893018018  0.8816234498  0.7512908778  0.7566016073  61.791967044  0.0520516114  0.0105654208  19.820126533  1500          0.9061012061  0.0520827250  0.3536031294 
+0.5000000000  0.9969104016  0.7731958763  0.9842497136  0.7961053837  0.9946509009  0.8940248027  0.7753872633  0.7646383467  74.150360453  0.0261477138  0.0044730822  19.820126533  1800          0.9128528396  0.0283842550  0.2015093405 
+0.5000000000  0.9963954686  0.7567010309  0.9873997709  0.7926689576  0.9952139640  0.8872604284  0.7610441767  0.7611940299  86.508753862  0.0226781357  0.0033915011  19.820126533  2100          0.9145317658  0.0243738863  0.1580106817 
+0.5000000000  0.9943357364  0.7402061856  0.9853951890  0.7926689576  0.9946509009  0.8861330327  0.7745266781  0.7680826636  98.867147270  0.0218632706  0.0034123961  19.820126533  2400          0.9086152887  0.0235694687  0.1589866513 
+0.5000000000  0.9963954686  0.7505154639  0.9856815578  0.8052691867  0.9954954955  0.8985343856  0.7667814114  0.7554535017  111.22554067  0.0205612690  0.0028601456  19.820126533  2700          0.9147637924  0.0219913419  0.1319747146 
+0.5000000000  0.9943357364  0.7443298969  0.9851088202  0.7995418099  0.9960585586  0.8861330327  0.7570281124  0.7382319173  123.58393408  0.0189966240  0.0029200109  19.820126533  3000          0.9056120761  0.0204566295  0.1242983241 
+0.5000000000  0.9938208033  0.7484536082  0.9856815578  0.7961053837  0.9957770270  0.8940248027  0.7596098680  0.7543053961  135.94232749  0.0183849553  0.0026781782  19.820126533  3300          0.9067727423  0.0197240444  0.1191781664 
+0.5000000000  0.9953656025  0.7319587629  0.9851088202  0.7823596793  0.9957770270  0.8906426156  0.7647733792  0.7623421355  148.30072090  0.0167308455  0.0025261656  19.820126533  3600          0.9100776712  0.0179939283  0.1075960995 
+0.5000000000  0.9963954686  0.7278350515  0.9859679267  0.7972508591  0.9954954955  0.9030439684  0.7667814114  0.7520091848  160.65911431  0.0183586146  0.0025506687  19.820126533  3900          0.9051050878  0.0196339490  0.1068304344 
+0.5000000000  0.9958805355  0.7319587629  0.9853951890  0.7995418099  0.9943693694  0.8895152198  0.7590361446  0.7623421355  173.01750772  0.0180595225  0.0026358827  19.820126533  4200          0.9082205876  0.0193774639  0.1106373036 
+0.5000000000  0.9958805355  0.7319587629  0.9862542955  0.8109965636  0.9957770270  0.9052987599  0.7641996558  0.7634902411  185.37590113  0.0161036675  0.0024905777  19.820126533  4500          0.9120048436  0.0173489563  0.0958283637 
+0.5000000000  0.9943357364  0.7319587629  0.9833906071  0.7938144330  0.9957770270  0.8906426156  0.7604704532  0.7474167623  197.73429454  0.0176074981  0.0024953302  19.820126533  4800          0.9098257407  0.0188551633  0.1045907762 
+0.5000000000  0.9958805355  0.7360824742  0.9888316151  0.8098510882  0.9974662162  0.8906426156  0.7728055077  0.7554535017  205.97322348  0.0147796693  0.0020718098  19.820126533  5000          0.9138934696  0.0158155742  0.0863054100 
+wandb: Waiting for W&B process to finish... (success).
+wandb: - 0.005 MB of 0.005 MB uploaded (0.000 MB deduped)wandb: \ 0.005 MB of 0.005 MB uploaded (0.000 MB deduped)wandb: | 0.005 MB of 0.005 MB uploaded (0.000 MB deduped)wandb: / 0.005 MB of 0.005 MB uploaded (0.000 MB deduped)wandb: - 0.005 MB of 0.005 MB uploaded (0.000 MB deduped)wandb: 
+wandb: Run summary:
+wandb:      dgpm_lambda 0.5
+wandb:         erm_loss 0.01537
+wandb: matching_penalty 0.00171
+wandb:       total_loss 0.01622
+wandb:     update_count 5001
+wandb: variance_penalty 0.03188
+wandb: 
+wandb:  View run noble-flower-1556 at: https://wandb.ai/nktoan271199/risk_distribution_matching_PACS/runs/9jmdjflu
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230803_165539-9jmdjflu/logs

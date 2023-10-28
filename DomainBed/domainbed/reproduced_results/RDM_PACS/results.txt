@@ -1,0 +1,25 @@
+Total records: 720
+
+-------- Dataset: PACS, model selection method: training-domain validation set
+Algorithm             A                     C                     P                     S                     Avg                  
+DGPM2                 88.4 +/- 0.2          81.3 +/- 1.6          97.1 +/- 0.1          81.8 +/- 1.1          87.2                 
+
+-------- Averages, model selection method: training-domain validation set
+Algorithm                  PACS                       Avg                       
+DGPM2                      87.2 +/- 0.7               87.2                      
+
+-------- Dataset: PACS, model selection method: leave-one-domain-out cross-validation
+Algorithm             A                     C                     P                     S                     Avg                  
+DGPM2                 X                     X                     X                     X                     X                    
+
+-------- Averages, model selection method: leave-one-domain-out cross-validation
+Algorithm                  PACS                       Avg                       
+DGPM2                      X                          X                         
+
+-------- Dataset: PACS, model selection method: test-domain validation set (oracle)
+Algorithm             A                     C                     P                     S                     Avg                  
+DGPM2                 85.9 +/- 0.3          82.8 +/- 0.1          97.2 +/- 0.6          80.8 +/- 0.4          86.7                 
+
+-------- Averages, model selection method: test-domain validation set (oracle)
+Algorithm                  PACS                       Avg                       
+DGPM2                      86.7 +/- 0.2               86.7                      

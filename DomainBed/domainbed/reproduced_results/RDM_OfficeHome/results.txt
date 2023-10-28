@@ -1,0 +1,25 @@
+Total records: 576
+
+-------- Dataset: OfficeHome, model selection method: training-domain validation set
+Algorithm             A                     C                     P                     R                     Avg                  
+DGPM2                 61.0 +/- 0.3          54.6 +/- 0.3          76.4 +/- 0.4          76.7 +/- 0.2          67.2                 
+
+-------- Averages, model selection method: training-domain validation set
+Algorithm                  OfficeHome                 Avg                       
+DGPM2                      67.2 +/- 0.3               67.2                      
+
+-------- Dataset: OfficeHome, model selection method: leave-one-domain-out cross-validation
+Algorithm             A                     C                     P                     R                     Avg                  
+DGPM2                 X                     X                     X                     X                     X                    
+
+-------- Averages, model selection method: leave-one-domain-out cross-validation
+Algorithm                  OfficeHome                 Avg                       
+DGPM2                      X                          X                         
+
+-------- Dataset: OfficeHome, model selection method: test-domain validation set (oracle)
+Algorithm             A                     C                     P                     R                     Avg                  
+DGPM2                 61.6 +/- 1.2          54.5 +/- 0.6          76.0 +/- 0.3          76.9 +/- 0.3          67.2                 
+
+-------- Averages, model selection method: test-domain validation set (oracle)
+Algorithm                  OfficeHome                 Avg                       
+DGPM2                      67.2 +/- 0.6               67.2                      

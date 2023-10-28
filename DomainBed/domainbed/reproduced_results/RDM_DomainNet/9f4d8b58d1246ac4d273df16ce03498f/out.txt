@@ -1,0 +1,73 @@
+Environment:
+	Python: 3.11.2
+	PyTorch: 2.0.0+cu117
+	Torchvision: 0.15.1+cu117
+	CUDA: 11.7
+	CUDNN: 8500
+	NumPy: 1.24.2
+	PIL: 9.5.0
+Args:
+	algorithm: DGPM2
+	checkpoint_freq: None
+	data_dir: /home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/domainbed/data/
+	dataset: DomainNet
+	holdout_fraction: 0.2
+	hparams: None
+	hparams_seed: 3
+	output_dir: /home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/domainbed/run_sweep/reported_test3Aug_DGPM2_DomainNet_lowerweight_matching/9f4d8b58d1246ac4d273df16ce03498f
+	save_model_every_checkpoint: False
+	seed: 604698931
+	skip_model_save: False
+	steps: None
+	task: domain_generalization
+	test_envs: [3]
+	trial_seed: 1
+	uda_holdout_fraction: 0
+HParams:
+	batch_size: 34
+	class_balanced: False
+	data_augmentation: True
+	dgpm_lambda: 0.9140272822495047
+	dgpm_lr: 1.0412618729905338e-05
+	dgpm_penalty_anneal_iters: 2290
+	lr: 9.100567295205603e-05
+	nonlinear_classifier: False
+	resnet18: False
+	resnet_dropout: 0.003
+	variance_weight: 0.0
+	weight_decay: 2.2710283595807042e-07
+/home/s222165627/.conda/envs/domainbed/lib/python3.11/site-packages/torch/utils/data/dataloader.py:561: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/s222165627/.conda/envs/domainbed/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/s222165627/.conda/envs/domainbed/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+wandb: Currently logged in as: ktoan271199 (nktoan271199). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.15.8 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.5
+wandb: Run data is saved locally in /home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/wandb/run-20230803_152543-3wy8yrch
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run skilled-butterfly-1539
+wandb:  View project at https://wandb.ai/nktoan271199/risk_distribution_matching_PACS
+wandb:  View run at https://wandb.ai/nktoan271199/risk_distribution_matching_PACS/runs/3wy8yrch
+dgpm_lambda   env0_in_acc   env0_out_acc  env1_in_acc   env1_out_acc  env2_in_acc   env2_out_acc  env3_in_acc   env3_out_acc  env4_in_acc   env4_out_acc  env5_in_acc   env5_out_acc  epoch         erm_loss      matching_pen  mem_gb        step          step_time     total_loss    variance_pen 
+0.9140272822  0.0038697278  0.0049870130  0.0038513710  0.0040693731  0.0032691609  0.0024216426  0.0020869565  0.0019710145  0.0036499516  0.0039029749  0.0036345225  0.0035443038  0.0000000000  5.9086961746  0.0413246155  13.945112228  0             1.9834599495  5.9086961746  0.2065795958 
+0.9140272822  0.5777581550  0.5502337662  0.2812469722  0.2613118884  0.5023264664  0.4839133744  0.0922753623  0.0925797101  0.5874759681  0.5776402903  0.5097011012  0.4896925859  0.8830251402  3.1166227220  0.3190106354  14.125008583  1000          0.6421799593  3.1166227220  8.9655934024 
+0.9140272822  0.6696706836  0.6273246753  0.3476649549  0.3113070439  0.5746977323  0.5441084896  0.1113623188  0.1112173913  0.6527342112  0.6381219463  0.5864781296  0.5505244123  1.7660502805  2.1497390934  0.4024375176  14.125008583  2000          0.6401800010  2.1497390934  10.663337803 
+0.9140272822  0.7311707875  0.6777142857  0.4086086620  0.3555856991  0.6309653538  0.5872829170  0.1284855072  0.1290434783  0.6991717140  0.6817774437  0.6335641828  0.5903074141  2.6490754207  1.8241274382  0.3523921871  14.125008583  3000          0.6393795888  2.0359047379  11.293823016 
+0.9140272822  0.7415073759  0.6846753247  0.4311355489  0.3644995640  0.6386279902  0.5919878226  0.1239782609  0.1218840580  0.7116899637  0.6938043887  0.6451006275  0.5990596745  3.5321005610  1.6971484003  0.2980669150  14.125008583  4000          0.6418273623  1.9695896881  11.765725743 
+0.9140272822  0.7539216705  0.6893506494  0.4448939056  0.3705067338  0.6476743985  0.6010516848  0.1277318841  0.1289855072  0.7180069096  0.7007430108  0.6511762472  0.6013743219  4.4151257012  1.6547548954  0.2842636442  14.125008583  5000          0.6423248165  1.9145796180  11.853560405 
+wandb: Waiting for W&B process to finish... (success).
+wandb: 
+wandb: Run summary:
+wandb:      dgpm_lambda 0.91403
+wandb:         erm_loss 1.79401
+wandb: matching_penalty 0.31401
+wandb:       total_loss 2.08102
+wandb:     update_count 5001
+wandb: variance_penalty 9.11381
+wandb: 
+wandb:  View run skilled-butterfly-1539 at: https://wandb.ai/nktoan271199/risk_distribution_matching_PACS/runs/3wy8yrch
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230803_152543-3wy8yrch/logs

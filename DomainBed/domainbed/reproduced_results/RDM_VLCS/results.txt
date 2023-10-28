@@ -1,0 +1,25 @@
+Total records: 720
+
+-------- Dataset: VLCS, model selection method: training-domain validation set
+Algorithm             C                     L                     S                     V                     Avg                  
+DGPM2                 98.1 +/- 0.2          64.9 +/- 0.7          72.6 +/- 0.5          77.9 +/- 1.2          78.4                 
+
+-------- Averages, model selection method: training-domain validation set
+Algorithm                  VLCS                       Avg                       
+DGPM2                      78.4 +/- 0.4               78.4                      
+
+-------- Dataset: VLCS, model selection method: leave-one-domain-out cross-validation
+Algorithm             C                     L                     S                     V                     Avg                  
+DGPM2                 X                     X                     X                     X                     X                    
+
+-------- Averages, model selection method: leave-one-domain-out cross-validation
+Algorithm                  VLCS                       Avg                       
+DGPM2                      X                          X                         
+
+-------- Dataset: VLCS, model selection method: test-domain validation set (oracle)
+Algorithm             C                     L                     S                     V                     Avg                  
+DGPM2                 98.2 +/- 0.6          65.2 +/- 0.4          70.0 +/- 0.4          76.1 +/- 0.5          77.4                 
+
+-------- Averages, model selection method: test-domain validation set (oracle)
+Algorithm                  VLCS                       Avg                       
+DGPM2                      77.4 +/- 0.3               77.4                      

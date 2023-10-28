@@ -1,0 +1,85 @@
+Environment:
+	Python: 3.11.2
+	PyTorch: 2.0.0+cu117
+	Torchvision: 0.15.1+cu117
+	CUDA: 11.7
+	CUDNN: 8500
+	NumPy: 1.24.2
+	PIL: 9.5.0
+Args:
+	algorithm: DGPM2
+	checkpoint_freq: None
+	data_dir: /home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/domainbed/data/
+	dataset: PACS
+	holdout_fraction: 0.2
+	hparams: None
+	hparams_seed: 3
+	output_dir: /home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/domainbed/run_sweep/reported_final2_PACS/cf977d86333c34bba05a60c355373a3c
+	save_model_every_checkpoint: False
+	seed: 2036031218
+	skip_model_save: False
+	steps: None
+	task: domain_generalization
+	test_envs: [0]
+	trial_seed: 1
+	uda_holdout_fraction: 0
+HParams:
+	batch_size: 65
+	class_balanced: False
+	data_augmentation: True
+	dgpm_lambda: 9.140272822495048
+	dgpm_lr: 1.0412618729905338e-05
+	dgpm_penalty_anneal_iters: 1801
+	lr: 9.100567295205603e-05
+	nonlinear_classifier: False
+	resnet18: False
+	resnet_dropout: 0.003
+	variance_weight: 0.0035079968512577832
+	weight_decay: 2.2710283595807042e-07
+/home/s222165627/.conda/envs/domainbed/lib/python3.11/site-packages/torch/utils/data/dataloader.py:561: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/s222165627/.conda/envs/domainbed/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/s222165627/.conda/envs/domainbed/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+wandb: Currently logged in as: ktoan271199 (nktoan271199). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.15.7 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.5
+wandb: Run data is saved locally in /home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/wandb/run-20230729_002551-zp1kyoxa
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run cool-flower-587
+wandb:  View project at https://wandb.ai/nktoan271199/risk_distribution_matching_PACS
+wandb:  View run at https://wandb.ai/nktoan271199/risk_distribution_matching_PACS/runs/zp1kyoxa
+dgpm_lambda   env0_in_acc   env0_out_acc  env1_in_acc   env1_out_acc  env2_in_acc   env2_out_acc  env3_in_acc   env3_out_acc  epoch         erm_loss      matching_pen  mem_gb        step          step_time     total_loss    variance_pen 
+9.1402728225  0.1812080537  0.1858190709  0.1476545842  0.1602564103  0.4034431138  0.3772455090  0.1876590331  0.2076433121  0.0000000000  2.0641837120  0.0181818008  15.986244678  0             2.5887689590  2.0641837120  0.3017425537 
+9.1402728225  0.8767541184  0.8777506112  0.9888059701  0.9380341880  0.9985029940  0.9790419162  0.9802798982  0.9719745223  14.595808383  0.2114319819  0.0485569350  16.159764766  300           0.5984863544  0.2114319819  0.7481187167 
+9.1402728225  0.7705918243  0.7652811736  0.9941364606  0.9444444444  0.9985029940  0.9910179641  0.9847328244  0.9656050955  29.191616766  0.0360225179  0.0086944739  16.159764766  600           0.6019447867  0.0360225179  0.2771732842 
+9.1402728225  0.8743136059  0.8557457213  0.9962686567  0.9594017094  0.9985029940  0.9880239521  0.9930025445  0.9528662420  43.787425149  0.0264888827  0.0057460340  16.159764766  900           0.6008235908  0.0264888827  0.2057505854 
+9.1402728225  0.8401464308  0.8459657702  0.9978678038  0.9444444444  0.9985029940  0.9910179641  0.9904580153  0.9528662420  58.383233532  0.0215679518  0.0042639987  16.159764766  1200          0.5997368320  0.0215679518  0.1849490319 
+9.1402728225  0.8114704088  0.8092909535  0.9882729211  0.9358974359  0.9970059880  0.9790419162  0.9917302799  0.9681528662  72.979041916  0.0194474372  0.0033290132  16.159764766  1500          0.6015283958  0.0194474372  0.1949163933 
+9.1402728225  0.8200122026  0.8264058680  0.9973347548  0.9358974359  1.0000000000  0.9850299401  0.9958651399  0.9668789809  87.574850299  0.0114616780  0.0025232188  16.159764766  1800          0.6008492295  0.0114616780  0.1062041878 
+9.1402728225  0.8279438682  0.8312958435  0.9984008529  0.9572649573  1.0000000000  0.9880239521  0.9990458015  0.9757961783  102.17065868  0.0026491062  0.0003943666  16.159764766  2100          0.5995925562  0.0064479707  0.0553724264 
+9.1402728225  0.8474679683  0.8508557457  1.0000000000  0.9615384615  1.0000000000  0.9880239521  0.9996819338  0.9770700637  116.76646706  0.0009965918  0.0001486619  16.159764766  2400          0.6015840038  0.0023964750  0.0117082562 
+9.1402728225  0.8273337401  0.8239608802  0.9984008529  0.9358974359  1.0000000000  0.9910179641  0.9996819338  0.9694267516  131.36227544  0.0008923974  0.0001223087  16.159764766  2700          0.5987214327  0.0020534179  0.0122820215 
+9.1402728225  0.8480780964  0.8581907090  0.9994669510  0.9636752137  1.0000000000  0.9880239521  0.9993638677  0.9770700637  145.95808383  0.0017354785  0.0001587041  16.159764766  3000          0.5999781640  0.0032971121  0.0316518614 
+9.1402728225  0.8517388652  0.8655256724  0.9973347548  0.9529914530  1.0000000000  0.9850299401  0.9977735369  0.9719745223  160.55389221  0.0009453321  0.0001050631  16.159764766  3300          0.6008992147  0.0019488312  0.0123128584 
+9.1402728225  0.8438071995  0.8533007335  1.0000000000  0.9658119658  1.0000000000  0.9880239521  0.9990458015  0.9719745223  175.14970059  0.0009766623  0.0001095772  16.159764766  3600          0.5992094938  0.0020344566  0.0160288017 
+9.1402728225  0.8560097621  0.8753056235  0.9994669510  0.9700854701  1.0000000000  0.9910179641  1.0000000000  0.9732484076  189.74550898  0.0008286231  0.0000903289  16.159764766  3900          0.6017084408  0.0016879914  0.0096174331 
+9.1402728225  0.8431970714  0.8484107579  1.0000000000  0.9594017094  1.0000000000  0.9910179641  0.9990458015  0.9694267516  204.34131736  0.0014358122  0.0001477146  16.159764766  4200          0.6015990615  0.0028601267  0.0211409956 
+9.1402728225  0.8621110433  0.8508557457  1.0000000000  0.9658119658  1.0000000000  0.9820359281  0.9996819338  0.9719745223  218.93712574  0.0013097998  0.0001545397  16.159764766  4500          0.6008855081  0.0028060005  0.0238498456 
+9.1402728225  0.8651616840  0.8777506112  1.0000000000  0.9700854701  0.9992514970  0.9850299401  0.9996819338  0.9745222930  233.53293413  0.0004986428  0.0000689697  16.159764766  4800          0.5997700270  0.0011544782  0.0072500725 
+9.1402728225  0.8511287370  0.8606356968  1.0000000000  0.9529914530  1.0000000000  0.9940119760  0.9993638677  0.9783439490  243.26347305  0.0007313021  0.0000835991  16.159764766  5000          0.6017079747  0.0015384039  0.0122529355 
+wandb: Waiting for W&B process to finish... (success).
+wandb: - 0.006 MB of 0.006 MB uploaded (0.000 MB deduped)wandb: \ 0.006 MB of 0.014 MB uploaded (0.000 MB deduped)wandb: | 0.014 MB of 0.014 MB uploaded (0.000 MB deduped)wandb: / 0.014 MB of 0.014 MB uploaded (0.000 MB deduped)wandb: 
+wandb: Run summary:
+wandb:      dgpm_lambda 9.14027
+wandb:         erm_loss 0.0
+wandb: matching_penalty 0.0
+wandb:       total_loss 0.0
+wandb:     update_count 5001
+wandb: variance_penalty 0.0
+wandb: 
+wandb:  View run cool-flower-587 at: https://wandb.ai/nktoan271199/risk_distribution_matching_PACS/runs/zp1kyoxa
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230729_002551-zp1kyoxa/logs

@@ -1,0 +1,25 @@
+Total records: 288
+
+-------- Dataset: DomainNet, model selection method: training-domain validation set
+Algorithm             clip                  info                  paint                 quick                 real                  sketch                Avg                  
+DGPM2                 62.1 +/- 0.2          20.7 +/- 0.1          49.2 +/- 0.4          14.1 +/- 0.4          63.0 +/- 1.3          51.7 +/- 0.1          43.4                 
+
+-------- Averages, model selection method: training-domain validation set
+Algorithm                  DomainNet                  Avg                       
+DGPM2                      43.4 +/- 0.3               43.4                      
+
+-------- Dataset: DomainNet, model selection method: leave-one-domain-out cross-validation
+Algorithm             clip                  info                  paint                 quick                 real                  sketch                Avg                  
+DGPM2                 X                     X                     X                     X                     X                     X                     X                    
+
+-------- Averages, model selection method: leave-one-domain-out cross-validation
+Algorithm                  DomainNet                  Avg                       
+DGPM2                      X                          X                         
+
+-------- Dataset: DomainNet, model selection method: test-domain validation set (oracle)
+Algorithm             clip                  info                  paint                 quick                 real                  sketch                Avg                  
+DGPM2                 62.1 +/- 0.2          20.7 +/- 0.1          49.4 +/- 0.3          14.1 +/- 0.4          63.3 +/- 1.1          51.7 +/- 0.1          43.5                 
+
+-------- Averages, model selection method: test-domain validation set (oracle)
+Algorithm                  DomainNet                  Avg                       
+DGPM2                      43.5 +/- 0.2               43.5                      

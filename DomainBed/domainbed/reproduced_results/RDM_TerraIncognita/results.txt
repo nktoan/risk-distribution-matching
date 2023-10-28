@@ -1,0 +1,25 @@
+Total records: 576
+
+-------- Dataset: TerraIncognita, model selection method: training-domain validation set
+Algorithm             L100                  L38                   L43                   L46                   Avg                  
+DGPM2                 52.9 +/- 1.2          43.1 +/- 1.0          58.1 +/- 1.3          36.1 +/- 2.9          47.5                 
+
+-------- Averages, model selection method: training-domain validation set
+Algorithm                  TerraIncognita             Avg                       
+DGPM2                      47.5 +/- 1.0               47.5                      
+
+-------- Dataset: TerraIncognita, model selection method: leave-one-domain-out cross-validation
+Algorithm             L100                  L38                   L43                   L46                   Avg                  
+DGPM2                 X                     X                     X                     X                     X                    
+
+-------- Averages, model selection method: leave-one-domain-out cross-validation
+Algorithm                  TerraIncognita             Avg                       
+DGPM2                      X                          X                         
+
+-------- Dataset: TerraIncognita, model selection method: test-domain validation set (oracle)
+Algorithm             L100                  L38                   L43                   L46                   Avg                  
+DGPM2                 54.7 +/- 2.5          44.6 +/- 1.3          57.9 +/- 1.0          41.4 +/- 0.2          49.7                 
+
+-------- Averages, model selection method: test-domain validation set (oracle)
+Algorithm                  TerraIncognita             Avg                       
+DGPM2                      49.7 +/- 0.7               49.7                      

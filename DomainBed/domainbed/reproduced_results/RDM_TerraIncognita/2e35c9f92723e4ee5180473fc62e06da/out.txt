@@ -1,0 +1,85 @@
+Environment:
+	Python: 3.11.2
+	PyTorch: 2.0.0+cu117
+	Torchvision: 0.15.1+cu117
+	CUDA: 11.7
+	CUDNN: 8500
+	NumPy: 1.24.2
+	PIL: 9.5.0
+Args:
+	algorithm: DGPM2
+	checkpoint_freq: None
+	data_dir: /home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/domainbed/data/
+	dataset: TerraIncognita
+	holdout_fraction: 0.2
+	hparams: None
+	hparams_seed: 1
+	output_dir: /home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/domainbed/run_sweep/reported_test_DGPM2_TerraIncognita_manyvalues_variance/2e35c9f92723e4ee5180473fc62e06da
+	save_model_every_checkpoint: False
+	seed: 2090852010
+	skip_model_save: False
+	steps: None
+	task: domain_generalization
+	test_envs: [0]
+	trial_seed: 1
+	uda_holdout_fraction: 0
+HParams:
+	batch_size: 30
+	class_balanced: False
+	data_augmentation: True
+	dgpm_lambda: 2.2686603621355363
+	dgpm_lr: 1.9752852240435053e-05
+	dgpm_penalty_anneal_iters: 1855
+	lr: 4.134684869819023e-05
+	nonlinear_classifier: False
+	resnet18: False
+	resnet_dropout: 0.03
+	variance_weight: 0.031152470042685558
+	weight_decay: 1.6797314086581348e-08
+/home/s222165627/.conda/envs/domainbed/lib/python3.11/site-packages/torch/utils/data/dataloader.py:561: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/s222165627/.conda/envs/domainbed/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/s222165627/.conda/envs/domainbed/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+wandb: Currently logged in as: ktoan271199 (nktoan271199). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.15.7 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.5
+wandb: Run data is saved locally in /home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/wandb/run-20230802_010957-w80gvea1
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run zesty-spaceship-1327
+wandb:  View project at https://wandb.ai/nktoan271199/risk_distribution_matching_PACS
+wandb:  View run at https://wandb.ai/nktoan271199/risk_distribution_matching_PACS/runs/w80gvea1
+dgpm_lambda   env0_in_acc   env0_out_acc  env1_in_acc   env1_out_acc  env2_in_acc   env2_out_acc  env3_in_acc   env3_out_acc  epoch         erm_loss      matching_pen  mem_gb        step          step_time     total_loss    variance_pen 
+2.2686603621  0.2080147640  0.1793248945  0.4972396970  0.4910118130  0.2367758186  0.2783375315  0.2513278096  0.2695578231  0.0000000000  2.2907071114  0.0652742386  7.4319658279  0             1.9295895100  2.2907071114  0.1591722965 
+2.2686603621  0.2480885842  0.2658227848  0.7985620747  0.8099640473  0.7462216625  0.7304785894  0.7083067771  0.6675170068  2.8337531486  0.8964903784  0.1017473221  7.6444144249  300           0.4060361846  0.8964903784  2.2654864737 
+2.2686603621  0.4558397047  0.4789029536  0.8420849917  0.8443759630  0.8019521411  0.7770780856  0.7917994476  0.7576530612  5.6675062972  0.5923977577  0.0765677071  7.6444144249  600           0.4059243862  0.5923977577  2.0862064491 
+2.2686603621  0.4626944371  0.5105485232  0.8535113622  0.8510529019  0.8208438287  0.8073047859  0.8194178883  0.7695578231  8.5012594458  0.5041236839  0.0676410166  7.6444144249  900           0.4039381679  0.5041236839  1.8670673511 
+2.2686603621  0.5278143949  0.5675105485  0.8545384517  0.8433487417  0.8362720403  0.8010075567  0.8039090716  0.7508503401  11.335012594  0.4586312027  0.0683129374  7.6444144249  1200          0.4135024063  0.4586312027  1.7557729657 
+2.2686603621  0.4814131294  0.5232067511  0.8740531519  0.8587570621  0.8677581864  0.8387909320  0.8557467601  0.7916666667  14.168765743  0.3998476934  0.0615639559  7.6444144249  1500          0.4150008702  0.3998476934  1.5862043356 
+2.2686603621  0.5133139995  0.5305907173  0.8918988317  0.8777606574  0.8768891688  0.8400503778  0.8582961547  0.7882653061  17.002518891  0.3693804503  0.0597601986  7.6444144249  1800          0.4145045630  0.3693804503  1.5921221651 
+2.2686603621  0.4703401002  0.5021097046  0.8809860059  0.8710837185  0.8734256927  0.8350125945  0.8487359252  0.7993197279  19.836272040  0.3941854537  0.0576686223  7.6444144249  2100          0.4152009765  0.5028338728  1.8567689423 
+2.2686603621  0.3814922225  0.3987341772  0.8741815381  0.8572162301  0.8570528967  0.8312342569  0.8415126407  0.7780612245  22.670025188  0.3897486824  0.0573007266  7.6444144249  2400          0.4149741562  0.5197445674  1.8607799384 
+2.2686603621  0.5602425521  0.5801687764  0.8790602131  0.8710837185  0.8756297229  0.8425692695  0.8470363289  0.8001700680  25.503778337  0.3815476898  0.0546409798  7.6444144249  2700          0.4151549927  0.5055095122  1.8582530039 
+2.2686603621  0.3514368574  0.4135021097  0.8839388882  0.8736517720  0.8715365239  0.8400503778  0.8451242830  0.7874149660  28.337531486  0.3718899309  0.0541725159  7.6444144249  3000          0.4148556463  0.4947889680  1.6341678751 
+2.2686603621  0.5228051674  0.5485232068  0.8651945051  0.8551617874  0.8602015113  0.8350125945  0.8404503930  0.7814625850  31.171284634  0.3876471822  0.0529634603  7.6444144249  3300          0.4161203782  0.5078032831  1.8681672964 
+2.2686603621  0.4141840232  0.4514767932  0.8590319682  0.8484848485  0.8602015113  0.8085642317  0.8468238793  0.7865646259  34.005037783  0.3736908188  0.0523856958  7.6444144249  3600          0.4171213126  0.4925361678  1.7882960694 
+2.2686603621  0.3886105985  0.4293248945  0.8962639620  0.8787878788  0.8797229219  0.8551637280  0.8631824942  0.8120748299  36.838790932  0.3692460217  0.0534259478  7.6444144249  3900          0.4168025724  0.4904513502  1.6747243327 
+2.2686603621  0.5117321381  0.5643459916  0.8904865836  0.8772470467  0.8913727960  0.8362720403  0.8655194391  0.8069727891  39.672544080  0.3376523627  0.0479812686  7.6444144249  4200          0.4170644228  0.4465055624  1.6508180999 
+2.2686603621  0.5357237016  0.5886075949  0.8598022853  0.8454031844  0.8794080605  0.8362720403  0.8659443382  0.8231292517  42.506297229  0.3525436787  0.0507080491  7.6444144249  4500          0.4152932994  0.4675830170  1.7275680419 
+2.2686603621  0.4355391511  0.4767932489  0.8777763513  0.8623523369  0.8803526448  0.8299748111  0.8506479711  0.8018707483  45.340050377  0.3381091558  0.0492641989  7.6444144249  4800          0.4168517836  0.4498728881  1.5822620059 
+2.2686603621  0.3572370156  0.3902953586  0.8957504173  0.8746789933  0.8567380353  0.8110831234  0.8540471638  0.7848639456  47.229219143  0.3694211023  0.0462672091  7.6444144249  5000          0.4234229028  0.4743856835  2.0283012119 
+wandb: Waiting for W&B process to finish... (success).
+wandb: - 0.005 MB of 0.005 MB uploaded (0.000 MB deduped)wandb: \ 0.014 MB of 0.014 MB uploaded (0.000 MB deduped)wandb: | 0.014 MB of 0.014 MB uploaded (0.000 MB deduped)wandb: 
+wandb: Run summary:
+wandb:      dgpm_lambda 2.26866
+wandb:         erm_loss 0.40039
+wandb: matching_penalty 0.02623
+wandb:       total_loss 0.4599
+wandb:     update_count 5001
+wandb: variance_penalty 4.8809
+wandb: 
+wandb:  View run zesty-spaceship-1327 at: https://wandb.ai/nktoan271199/risk_distribution_matching_PACS/runs/w80gvea1
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230802_010957-w80gvea1/logs

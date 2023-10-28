@@ -1,0 +1,85 @@
+Environment:
+	Python: 3.11.2
+	PyTorch: 2.0.0+cu117
+	Torchvision: 0.15.1+cu117
+	CUDA: 11.7
+	CUDNN: 8500
+	NumPy: 1.24.2
+	PIL: 9.5.0
+Args:
+	algorithm: DGPM2
+	checkpoint_freq: None
+	data_dir: /home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/domainbed/data/
+	dataset: PACS
+	holdout_fraction: 0.2
+	hparams: None
+	hparams_seed: 1
+	output_dir: /home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/domainbed/run_sweep/reported_final2_PACS/d4e9171225dedb94d2d457e8c3fa873e
+	save_model_every_checkpoint: False
+	seed: 1363847104
+	skip_model_save: False
+	steps: None
+	task: domain_generalization
+	test_envs: [1]
+	trial_seed: 1
+	uda_holdout_fraction: 0
+HParams:
+	batch_size: 60
+	class_balanced: False
+	data_augmentation: True
+	dgpm_lambda: 2.2686603621355363
+	dgpm_lr: 1.9752852240435053e-05
+	dgpm_penalty_anneal_iters: 1855
+	lr: 4.134684869819023e-05
+	nonlinear_classifier: False
+	resnet18: False
+	resnet_dropout: 0.0
+	variance_weight: 0.003115247004268556
+	weight_decay: 1.6797314086581348e-08
+/home/s222165627/.conda/envs/domainbed/lib/python3.11/site-packages/torch/utils/data/dataloader.py:561: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/s222165627/.conda/envs/domainbed/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/s222165627/.conda/envs/domainbed/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+wandb: Currently logged in as: ktoan271199 (nktoan271199). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.15.7 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.5
+wandb: Run data is saved locally in /home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/wandb/run-20230729_013106-tx8spods
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run quiet-dew-606
+wandb:  View project at https://wandb.ai/nktoan271199/risk_distribution_matching_PACS
+wandb:  View run at https://wandb.ai/nktoan271199/risk_distribution_matching_PACS/runs/tx8spods
+dgpm_lambda   env0_in_acc   env0_out_acc  env1_in_acc   env1_out_acc  env2_in_acc   env2_out_acc  env3_in_acc   env3_out_acc  epoch         erm_loss      matching_pen  mem_gb        step          step_time     total_loss    variance_pen 
+2.2686603621  0.2464917633  0.2127139364  0.2052238806  0.2072649573  0.3772455090  0.3952095808  0.2337786260  0.2496815287  0.0000000000  2.0094919205  0.0475597382  14.757341861  0             2.1157231331  2.0094919205  0.1411653608 
+2.2686603621  0.9926784625  0.9339853301  0.7803837953  0.7692307692  0.9977544910  0.9910179641  0.9758269720  0.9363057325  13.473053892  0.1583958043  0.0667507585  14.932216167  300           0.5460272551  0.1583958043  0.5932309185 
+2.2686603621  0.9694935937  0.8997555012  0.8113006397  0.8098290598  0.9940119760  0.9790419162  0.9736005089  0.9426751592  26.946107784  0.0309814612  0.0098428377  14.932216167  600           0.5472246909  0.0309814612  0.2190093184 
+2.2686603621  0.9810860281  0.9022004890  0.7825159915  0.7905982906  0.9977544910  0.9880239521  0.9860050891  0.9528662420  40.419161676  0.0235118318  0.0056523546  14.932216167  900           0.5488639688  0.0235118318  0.1996409241 
+2.2686603621  0.9932885906  0.9339853301  0.8155650320  0.8055555556  0.9992514970  0.9820359281  0.9888676845  0.9464968153  53.892215568  0.0121331503  0.0029394341  14.932216167  1200          0.5479119833  0.0121331503  0.1022326148 
+2.2686603621  0.9957291031  0.9364303178  0.7835820896  0.7735042735  0.9962574850  0.9850299401  0.9939567430  0.9464968153  67.365269461  0.0140649669  0.0037783686  14.932216167  1500          0.5505504489  0.0140649669  0.1178535238 
+2.2686603621  0.9951189750  0.9437652812  0.8118336887  0.8012820513  0.9992514970  0.9760479042  0.9958651399  0.9554140127  80.838323353  0.0132041001  0.0030001291  14.932216167  1800          0.5492599638  0.0132041001  0.1101084879 
+2.2686603621  0.9981696156  0.9437652812  0.7691897655  0.7649572650  1.0000000000  0.9820359281  0.9984096692  0.9668789809  94.311377245  0.0070309010  0.0012252967  14.932216167  2100          0.5519392753  0.0090858213  0.0650944179 
+2.2686603621  0.9987797437  0.9462102689  0.8038379531  0.7777777778  0.9992514970  0.9790419162  0.9990458015  0.9617834395  107.78443113  0.0024906662  0.0004311148  14.932216167  2400          0.5505433321  0.0035471776  0.0251852419 
+2.2686603621  0.9987797437  0.9486552567  0.8070362473  0.7948717949  1.0000000000  0.9940119760  0.9984096692  0.9630573248  121.25748502  0.0053711496  0.0007539050  14.932216167  2700          0.5513870494  0.0073082762  0.0727943227 
+2.2686603621  0.9969493594  0.9364303178  0.8049040512  0.8055555556  0.9977544910  0.9730538922  0.9977735369  0.9643312102  134.73053892  0.0041505980  0.0006279691  14.932216167  3000          0.5508073187  0.0057718137  0.0630983648 
+2.2686603621  0.9951189750  0.9242053790  0.7505330490  0.7542735043  0.9977544910  0.9850299401  0.9952290076  0.9656050955  148.20359281  0.0042381480  0.0007025433  14.932216167  3300          0.5502882147  0.0060183814  0.0598351785 
+2.2686603621  0.9993898719  0.9462102689  0.7985074627  0.8055555556  1.0000000000  0.9850299401  0.9990458015  0.9732484076  161.67664670  0.0052026547  0.0008179379  14.932216167  3600          0.5487681778  0.0072655678  0.0665404741 
+2.2686603621  1.0000000000  0.9413202934  0.7622601279  0.7264957265  1.0000000000  0.9940119760  0.9987277354  0.9668789809  175.14970059  0.0022472071  0.0003442574  14.932216167  3900          0.5513516768  0.0031419885  0.0365230522 
+2.2686603621  0.9993898719  0.9315403423  0.8027718550  0.7905982906  1.0000000000  0.9790419162  0.9993638677  0.9694267516  188.62275449  0.0019057057  0.0003013166  14.932216167  4200          0.5493393135  0.0026650031  0.0243038399 
+2.2686603621  0.9987797437  0.9437652812  0.7633262260  0.7393162393  0.9992514970  0.9880239521  0.9993638677  0.9656050955  202.09580838  0.0030028612  0.0004773585  14.932216167  4500          0.5507509859  0.0041827266  0.0311054280 
+2.2686603621  1.0000000000  0.9364303178  0.8065031983  0.7884615385  1.0000000000  0.9940119760  0.9996819338  0.9630573248  215.56886227  0.0041814438  0.0005637201  14.932216167  4800          0.5520234164  0.0056742612  0.0686713192 
+2.2686603621  1.0000000000  0.9413202934  0.8192963753  0.8055555556  1.0000000000  0.9880239521  0.9996819338  0.9668789809  224.55089820  0.0009075761  0.0001891851  14.932216167  5000          0.5487826169  0.0013634997  0.0085793679 
+wandb: Waiting for W&B process to finish... (success).
+wandb: - 0.006 MB of 0.006 MB uploaded (0.000 MB deduped)wandb: \ 0.006 MB of 0.012 MB uploaded (0.000 MB deduped)wandb: | 0.006 MB of 0.014 MB uploaded (0.000 MB deduped)wandb: / 0.006 MB of 0.014 MB uploaded (0.000 MB deduped)wandb: 
+wandb: Run summary:
+wandb:      dgpm_lambda 2.26866
+wandb:         erm_loss 0.0
+wandb: matching_penalty 0.0
+wandb:       total_loss 0.0
+wandb:     update_count 5001
+wandb: variance_penalty 0.0
+wandb: 
+wandb:  View run quiet-dew-606 at: https://wandb.ai/nktoan271199/risk_distribution_matching_PACS/runs/tx8spods
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230729_013106-tx8spods/logs

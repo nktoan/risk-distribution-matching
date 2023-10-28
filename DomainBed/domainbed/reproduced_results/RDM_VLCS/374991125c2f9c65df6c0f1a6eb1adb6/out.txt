@@ -1,0 +1,85 @@
+Environment:
+	Python: 3.11.2
+	PyTorch: 2.0.0+cu117
+	Torchvision: 0.15.1+cu117
+	CUDA: 11.7
+	CUDNN: 8500
+	NumPy: 1.24.2
+	PIL: 9.5.0
+Args:
+	algorithm: DGPM2
+	checkpoint_freq: None
+	data_dir: /home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/domainbed/data/
+	dataset: VLCS
+	holdout_fraction: 0.2
+	hparams: None
+	hparams_seed: 3
+	output_dir: /home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/domainbed/run_sweep/reported_final2_VLCS/374991125c2f9c65df6c0f1a6eb1adb6
+	save_model_every_checkpoint: False
+	seed: 2059193944
+	skip_model_save: False
+	steps: None
+	task: domain_generalization
+	test_envs: [0]
+	trial_seed: 0
+	uda_holdout_fraction: 0
+HParams:
+	batch_size: 93
+	class_balanced: False
+	data_augmentation: True
+	dgpm_lambda: 3.453641220949037
+	dgpm_lr: 1.5237924794600135e-05
+	dgpm_penalty_anneal_iters: 1731
+	lr: 5.991560399526455e-05
+	nonlinear_classifier: False
+	resnet18: False
+	resnet_dropout: 0.003
+	variance_weight: 0.005010323853393249
+	weight_decay: 5.8202860295770495e-08
+/home/s222165627/.conda/envs/domainbed/lib/python3.11/site-packages/torch/utils/data/dataloader.py:561: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/s222165627/.conda/envs/domainbed/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/s222165627/.conda/envs/domainbed/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+wandb: Currently logged in as: ktoan271199 (nktoan271199). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.15.7 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.5
+wandb: Run data is saved locally in /home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/wandb/run-20230729_022639-uop54y0p
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run spring-leaf-626
+wandb:  View project at https://wandb.ai/nktoan271199/risk_distribution_matching_PACS
+wandb:  View run at https://wandb.ai/nktoan271199/risk_distribution_matching_PACS/runs/uop54y0p
+dgpm_lambda   env0_in_acc   env0_out_acc  env1_in_acc   env1_out_acc  env2_in_acc   env2_out_acc  env3_in_acc   env3_out_acc  epoch         erm_loss      matching_pen  mem_gb        step          step_time     total_loss    variance_pen 
+3.4536412209  0.6113074205  0.6289752650  0.4602352941  0.4877589454  0.3849961919  0.3902439024  0.4442798963  0.4459259259  0.0000000000  1.6235790253  0.0432672501  22.815834999  0             10.074659824  1.6235790253  0.0851198286 
+3.4536412209  0.9717314488  0.9646643110  0.8042352941  0.7231638418  0.9421172887  0.7926829268  0.9629766753  0.8666666667  24.646643109  0.3919160783  0.0917064826  22.990049362  300           2.4144446166  0.3919160783  1.2555337205 
+3.4536412209  0.9779151943  0.9611307420  0.9590588235  0.7683615819  0.9741051028  0.7682926829  0.9859311366  0.8474074074  49.293286219  0.1368043314  0.0630220699  22.990049362  600           2.4292446256  0.1368043314  0.6011990139 
+3.4536412209  0.9673144876  0.9681978799  0.9576470588  0.7382297552  0.9782939832  0.7515243902  0.9888930026  0.8355555556  73.939929328  0.0599458549  0.0163906066  22.990049362  900           2.4500599591  0.0599458549  0.3369015526 
+3.4536412209  0.9761484099  0.9823321555  0.9910588235  0.7514124294  0.9961919269  0.7774390244  0.9948167345  0.8548148148  98.586572438  0.0358407318  0.0073511219  22.990049362  1200          2.4880314652  0.0358407318  0.2332442180 
+3.4536412209  0.9840989399  0.9752650177  0.9910588235  0.7250470810  0.9946686976  0.7667682927  0.9988893003  0.8533333333  123.23321554  0.0318493688  0.0056599204  22.990049362  1500          2.4522868903  0.0318493688  0.2403458763 
+3.4536412209  0.9681978799  0.9646643110  0.9990588235  0.7589453861  0.9984767708  0.7896341463  0.9996297668  0.8474074074  147.87985865  0.0179760823  0.0025026035  22.990049362  1800          2.4994432076  0.0187311515  0.1166776968 
+3.4536412209  0.9655477032  0.9646643110  0.9990588235  0.7551789077  0.9988575781  0.7881097561  0.9988893003  0.8459259259  172.52650176  0.0064505984  0.0007367357  22.990049362  2100          2.4860632404  0.0093490751  0.0706652884 
+3.4536412209  0.9584805654  0.9611307420  0.9938823529  0.7589453861  0.9969535415  0.7804878049  0.9948167345  0.8518518519  197.17314487  0.0057566901  0.0006421916  22.990049362  2400          2.4909633891  0.0082819300  0.0613414711 
+3.4536412209  0.9717314488  0.9681978799  0.9990588235  0.7645951036  0.9988575781  0.7682926829  0.9988893003  0.8562962963  221.81978798  0.0030987789  0.0003380775  22.990049362  2700          2.4702760108  0.0044552141  0.0376895174 
+3.4536412209  0.9708480565  0.9787985866  0.9985882353  0.7344632768  1.0000000000  0.7789634146  0.9992595335  0.8444444444  246.46643109  0.0040540484  0.0004273764  22.990049362  3000          2.4798101846  0.0057866169  0.0512069811 
+3.4536412209  0.9805653710  0.9787985866  0.9948235294  0.7664783427  0.9958111196  0.7591463415  0.9977786005  0.8488888889  271.11307420  0.0036608906  0.0003314400  22.990049362  3300          2.4899519046  0.0050261440  0.0440248164 
+3.4536412209  0.9602473498  0.9717314488  0.9985882353  0.7382297552  0.9996191927  0.8003048780  0.9996297668  0.8400000000  295.75971731  0.0052874252  0.0005217616  22.990049362  3600          2.4824442267  0.0073857500  0.0591473804 
+3.4536412209  0.9726148410  0.9752650177  0.9985882353  0.7344632768  0.9984767708  0.7957317073  1.0000000000  0.8577777778  320.40636042  0.0034024981  0.0003325081  22.990049362  3900          2.4877276667  0.0047502594  0.0397973646 
+3.4536412209  0.9549469965  0.9575971731  0.9990588235  0.7532956685  0.9980959634  0.7957317073  0.9988893003  0.8429629630  345.05300353  0.0049529307  0.0005607923  22.990049362  4200          2.5018231630  0.0071459601  0.0511452046 
+3.4536412209  0.9787985866  0.9717314488  0.9995294118  0.7344632768  0.9996191927  0.7774390244  1.0000000000  0.8474074074  369.69964664  0.0026504392  0.0003042157  22.990049362  4500          2.4806322964  0.0038026633  0.0202725493 
+3.4536412209  0.9734982332  0.9752650177  0.9981176471  0.7570621469  0.9988575781  0.7881097561  0.9988893003  0.8340740741  394.34628975  0.0028463093  0.0003197575  22.990049362  4800          2.4712547215  0.0040980178  0.0294154646 
+3.4536412209  0.9673144876  0.9611307420  0.9990588235  0.7438794727  0.9977151561  0.7835365854  0.9977786005  0.8503703704  410.77738515  0.0023092207  0.0002491331  22.990049362  5000          2.4587260735  0.0033049850  0.0270138141 
+wandb: Waiting for W&B process to finish... (success).
+wandb: - 0.006 MB of 0.006 MB uploaded (0.000 MB deduped)wandb: \ 0.006 MB of 0.014 MB uploaded (0.000 MB deduped)wandb: | 0.006 MB of 0.014 MB uploaded (0.000 MB deduped)wandb: 
+wandb: Run summary:
+wandb:      dgpm_lambda 3.45364
+wandb:         erm_loss 0.00082
+wandb: matching_penalty 0.00018
+wandb:       total_loss 0.00143
+wandb:     update_count 5001
+wandb: variance_penalty 0.0001
+wandb: 
+wandb:  View run spring-leaf-626 at: https://wandb.ai/nktoan271199/risk_distribution_matching_PACS/runs/uop54y0p
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230729_022639-uop54y0p/logs

@@ -1,0 +1,85 @@
+Environment:
+	Python: 3.11.2
+	PyTorch: 2.0.0+cu117
+	Torchvision: 0.15.1+cu117
+	CUDA: 11.7
+	CUDNN: 8500
+	NumPy: 1.24.2
+	PIL: 9.5.0
+Args:
+	algorithm: DGPM2
+	checkpoint_freq: None
+	data_dir: /home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/domainbed/data/
+	dataset: VLCS
+	holdout_fraction: 0.2
+	hparams: None
+	hparams_seed: 0
+	output_dir: /home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/domainbed/run_sweep/reported_final2_VLCS/04b94ac49d55ddae6a7f02cb60182966
+	save_model_every_checkpoint: False
+	seed: 613912984
+	skip_model_save: False
+	steps: None
+	task: domain_generalization
+	test_envs: [0]
+	trial_seed: 1
+	uda_holdout_fraction: 0
+HParams:
+	batch_size: 80
+	class_balanced: False
+	data_augmentation: True
+	dgpm_lambda: 5.0
+	dgpm_lr: 1e-05
+	dgpm_penalty_anneal_iters: 1500
+	lr: 5e-05
+	nonlinear_classifier: False
+	resnet18: False
+	resnet_dropout: 0.0
+	variance_weight: 0.004
+	weight_decay: 0.0
+/home/s222165627/.conda/envs/domainbed/lib/python3.11/site-packages/torch/utils/data/dataloader.py:561: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 3, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/s222165627/.conda/envs/domainbed/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/s222165627/.conda/envs/domainbed/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+wandb: Currently logged in as: ktoan271199 (nktoan271199). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.15.7 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.5
+wandb: Run data is saved locally in /home/s222165627/causal_optimisation_dg/quantile_rm/DomainBed/wandb/run-20230729_022245-wxd470i4
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run decent-breeze-624
+wandb:  View project at https://wandb.ai/nktoan271199/risk_distribution_matching_PACS
+wandb:  View run at https://wandb.ai/nktoan271199/risk_distribution_matching_PACS/runs/wxd470i4
+dgpm_lambda   env0_in_acc   env0_out_acc  env1_in_acc   env1_out_acc  env2_in_acc   env2_out_acc  env3_in_acc   env3_out_acc  epoch         erm_loss      matching_pen  mem_gb        step          step_time     total_loss    variance_pen 
+5.0000000000  0.6130742049  0.6183745583  0.4672941176  0.4613935970  0.3792840823  0.4207317073  0.4505738615  0.4074074074  0.0000000000  1.6730344296  0.0617370605  19.641300201  0             7.3136739731  1.6730344296  0.0861984193 
+5.0000000000  0.9849823322  0.9717314488  0.8508235294  0.7457627119  0.9162223915  0.8353658537  0.9459459459  0.8503703704  21.201413427  0.4238247595  0.0933512783  19.818242073  300           2.2564671238  0.4238247595  1.3027385261 
+5.0000000000  0.9734982332  0.9752650177  0.9487058824  0.7589453861  0.9527798934  0.7789634146  0.9759348389  0.8237037037  42.402826855  0.1661892798  0.0809002272  19.818242073  600           2.2998946921  0.1661892798  0.6874082390 
+5.0000000000  0.9779151943  0.9611307420  0.9792941176  0.7457627119  0.9714394516  0.8262195122  0.9840799704  0.8059259259  63.604240282  0.0742624953  0.0274426619  19.818242073  900           2.2689502438  0.0742624953  0.3738770834 
+5.0000000000  0.9823321555  0.9823321555  0.9938823529  0.7382297552  0.9939070830  0.7926829268  0.9966679008  0.8251851852  84.805653710  0.0393510672  0.0086503696  19.818242073  1200          2.3230689820  0.0393510672  0.2333516178 
+5.0000000000  0.9708480565  0.9575971731  0.9825882353  0.7344632768  0.9889565880  0.8125000000  0.9951869678  0.8311111111  106.00706713  0.0330831862  0.0075282288  19.818242073  1500          2.3102103408  0.0334265477  0.2186916100 
+5.0000000000  0.9885159011  0.9858657244  0.9981176471  0.7382297552  0.9992383854  0.8079268293  0.9992595335  0.8414814815  127.20848056  0.0107017343  0.0014700890  19.818242073  1800          2.3219380530  0.0183526124  0.0751083045 
+5.0000000000  0.9840989399  0.9717314488  1.0000000000  0.7495291902  0.9996191927  0.8185975610  0.9992595335  0.8340740741  148.40989399  0.0039849996  0.0005687618  19.818242073  2100          2.3172830486  0.0069725931  0.0359461073 
+5.0000000000  0.9814487633  0.9823321555  0.9985882353  0.7495291902  0.9988575781  0.8307926829  0.9996297668  0.8414814815  169.61130742  0.0048388295  0.0005907694  19.818242073  2400          2.3336395208  0.0079853184  0.0481603812 
+5.0000000000  0.9690812721  0.9717314488  0.9971764706  0.7193973635  0.9988575781  0.7942073171  0.9962976675  0.8414814815  190.81272084  0.0065361667  0.0007940165  19.818242073  2700          2.3434851511  0.0108565344  0.0875712691 
+5.0000000000  0.9849823322  0.9858657244  0.9990588235  0.7288135593  0.9992383854  0.8079268293  0.9992595335  0.8459259259  212.01413427  0.0037747506  0.0004876328  19.818242073  3000          2.3465580360  0.0063541232  0.0353021986 
+5.0000000000  0.9876325088  0.9717314488  0.9971764706  0.7325800377  0.9973343488  0.8155487805  0.9985190670  0.8444444444  233.21554770  0.0027944042  0.0004150836  19.818242073  3300          2.3358938710  0.0049550109  0.0212971994 
+5.0000000000  0.9840989399  0.9823321555  0.9990588235  0.7570621469  0.9988575781  0.8033536585  0.9996297668  0.8429629630  254.41696113  0.0076896665  0.0008348529  19.818242073  3600          2.3315667550  0.0122514537  0.0968807197 
+5.0000000000  0.9814487633  0.9787985866  0.9995294118  0.7419962335  0.9996191927  0.8277439024  0.9985190670  0.8444444444  275.61837455  0.0029839626  0.0003399944  19.818242073  3900          2.3381689175  0.0048252251  0.0353225830 
+5.0000000000  0.9832155477  0.9823321555  0.9995294118  0.7476459510  1.0000000000  0.8109756098  1.0000000000  0.8414814815  296.81978798  0.0024742971  0.0003674825  19.818242073  4200          2.3471706939  0.0044263210  0.0286528546 
+5.0000000000  0.9805653710  0.9823321555  1.0000000000  0.7419962335  0.9992383854  0.7972560976  0.9988893003  0.8370370370  318.02120141  0.0027680419  0.0003717200  19.818242073  4500          2.3486866403  0.0047673136  0.0351679422 
+5.0000000000  0.9770318021  0.9681978799  0.9985882353  0.7306967985  0.9950495050  0.8109756098  0.9944465013  0.8266666667  339.22261484  0.0029647927  0.0003401470  19.818242073  4800          2.3272398408  0.0048311908  0.0414157273 
+5.0000000000  0.9902826855  0.9823321555  0.9995294118  0.7288135593  0.9988575781  0.8201219512  0.9996297668  0.8400000000  353.35689045  0.0040207881  0.0004560757  19.818242073  5000          2.2776545775  0.0065590905  0.0644810073 
+wandb: Waiting for W&B process to finish... (success).
+wandb: - 0.005 MB of 0.005 MB uploaded (0.000 MB deduped)wandb: \ 0.005 MB of 0.005 MB uploaded (0.000 MB deduped)wandb: | 0.005 MB of 0.005 MB uploaded (0.000 MB deduped)wandb: / 0.014 MB of 0.014 MB uploaded (0.000 MB deduped)wandb: - 0.014 MB of 0.014 MB uploaded (0.000 MB deduped)wandb: 
+wandb: Run summary:
+wandb:      dgpm_lambda 5.0
+wandb:         erm_loss 0.00148
+wandb: matching_penalty 0.00039
+wandb:       total_loss 0.00344
+wandb:     update_count 5001
+wandb: variance_penalty 0.00194
+wandb: 
+wandb:  View run decent-breeze-624 at: https://wandb.ai/nktoan271199/risk_distribution_matching_PACS/runs/wxd470i4
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230729_022245-wxd470i4/logs
