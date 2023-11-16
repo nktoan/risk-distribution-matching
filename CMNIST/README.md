@@ -1,6 +1,6 @@
 # CMNIST experiments
 
-In-submission paper for WACV 2024 (Research Track): *"Domain Generalisation via Risk Distribution Matching".*
+This is the source code for replicating the results on the CMNIST dataset from our paper accepted to WACV'24 (Research Track): *Domain Generalisation via Risk Distribution Matching*.
 
 We named our proposed algorithm  **RDM**.
 
