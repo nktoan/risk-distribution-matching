@@ -1,13 +1,13 @@
 # CMNIST experiments
 
-This is the source code for replicating the results on the CMNIST dataset from our paper accepted to WACV'24 (Research Track): *Domain Generalisation via Risk Distribution Matching*.
+This is the source code for replicating the results on the CMNIST dataset from our paper accepted to **WACV'24 (Research Track)**: **'Domain Generalisation via Risk Distribution Matching'**.
 
 We named our proposed algorithm  **RDM**.
 
 This sub-repo contains code for running experiments on the ColoredMNIST dataset of 
 [Arjovsky et al., 2019](https://arxiv.org/abs/1907.02893).
 
-This sub-repository allows you to replicate the ColoredMNIST results presented in our submitted paper. Specifically, once you have configured your paths, initialized your launcher, and set up ColoredMNIST based on the provided guidelines, you can use the subsequent commands to reproduce the *RDM* results we have reported in our paper.
+This sub-repository allows you to replicate the ColoredMNIST results presented in our submitted paper. Specifically, once you have configured your paths, initialised your launcher, and set up ColoredMNIST based on the provided guidelines, you can use the subsequent commands to reproduce the *RDM* results we have reported in our paper.
 
 Thank you for your interest!
 
