@@ -18,7 +18,7 @@ Each of these sub-repositories comes with its individual README. These documents
 
 ## Citation
 
-If you employ the codes or datasets provided in this repository or utilize our proposed method as comparison baselines in your experiments, please cite our paper. Again, thank you for your interest!
+If you employ the codes or datasets provided in this repository or utilise our proposed method as comparison baselines in your experiments, please cite our paper. Again, thank you for your interest!
 ```
 @article{nguyen2023domain,
   title={Domain Generalisation via Risk Distribution Matching},
