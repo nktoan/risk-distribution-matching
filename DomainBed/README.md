@@ -8,6 +8,14 @@ This sub-repository allows you to replicate the DomainBed results presented in o
 
 Thank you for your interest!
 
+#### Train a model:
+
+python3 -m domainbed.scripts.train\
+       --data_dir=/my/datasets/path\
+       --algorithm RDM\
+       --dataset PACS\
+       --test_env 2
+       
 #### Launch sweep (with our proposed algorithm RDM)
 ```sh
 python -m domainbed.scripts.sweep launch\
