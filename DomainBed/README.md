@@ -4,7 +4,7 @@ This is the source code for replicating the results on the DomainBed suite from 
 
 We named our proposed algorithm  **RDM**.
 
-This sub-repository allows you to replicate the DomainBed results presented in our submitted paper. Specifically, once you have configured your paths, initialized your launcher, and set up DomainBed based on the provided guidelines, you can use the subsequent commands to reproduce the *RDM* results we have reported in our paper.
+This sub-repository allows you to replicate the DomainBed results presented in our submitted paper. Specifically, once you have configured your paths, initialised your launcher, and set up DomainBed based on the provided guidelines, you can use the subsequent commands to reproduce the *RDM* results we have reported in our paper.
 
 Thank you for your interest!
 
@@ -47,7 +47,7 @@ Slurm parameters will need to be changed for your cluster.
 
 # Welcome to DomainBed
 
-DomainBed is a PyTorch suite containing benchmark datasets and algorithms for domain generalization, as introduced in [In Search of Lost Domain Generalization](https://arxiv.org/abs/2007.01434).
+DomainBed is a PyTorch suite containing benchmark datasets and algorithms for domain generalisation, as introduced in [In Search of Lost Domain Generalization](https://arxiv.org/abs/2007.01434).
 
 ## Current results
 
