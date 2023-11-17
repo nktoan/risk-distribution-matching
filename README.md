@@ -11,7 +11,19 @@ The repository is structured into two distinct sub-repositories, each aligned wi
 1. CMNIST
 2. DomainBed
 
-Each of these sub-repositories comes with its individual README. These documents provide detailed steps on setting things up and replicating the experiments. We have separated these sub-repositories to:
+Each of these sub-repositories comes with its individual README. These documents provide detailed steps for setting things up and replicating the experiments. We have separated these sub-repositories to:
 
 - Enable users to leverage existing benchmark code, notably from DomainBed.
 - Allow users to focus on specific sub-repositories of their choice without dealing with unnecessary installation requirements.
+
+## Citation
+
+If you use the codes or datasets in this repository, please cite our paper.
+```
+@article{nguyen2023domain,
+  title={Domain Generalisation via Risk Distribution Matching},
+  author={Nguyen, Toan and Do, Kien and Duong, Bao and Nguyen, Thin},
+  journal={arXiv preprint arXiv:2310.18598},
+  year={2023}
+}
+```
