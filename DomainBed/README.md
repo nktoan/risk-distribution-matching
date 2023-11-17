@@ -178,7 +178,3 @@ By default, this only runs tests which don't depend on a dataset directory. To r
 ```sh
 DATA_DIR=/my/datasets/path python -m unittest discover
 ```
-
-## License
-
-This source code is released under the MIT license, included [here](LICENSE).
