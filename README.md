@@ -20,10 +20,11 @@ Each of these sub-repositories comes with its individual README. These documents
 
 If you employ the codes or datasets provided in this repository or utilise our proposed method as comparison baselines in your experiments, please cite our paper. Again, thank you for your interest!
 ```
-@article{nguyen2023domain,
+@inproceedings{nguyen2024domain,
   title={Domain Generalisation via Risk Distribution Matching},
   author={Nguyen, Toan and Do, Kien and Duong, Bao and Nguyen, Thin},
-  journal={arXiv preprint arXiv:2310.18598},
-  year={2023}
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+  pages={2790--2799},
+  year={2024}
 }
 ```
